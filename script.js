@@ -78,17 +78,50 @@
 // matilda.calcAge = mick.calcAge;
 // matilda.calcAge();
 
-const mick = {
-  year: 1992,
-  calcAge: function () {
-    console.log(this);
-    console.log(2037 - this.year);
-  },
+// const mick = {
+//   year: 1992,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   },
 
-  greet: () => {
-    console.log(this);
-    console.log(`Hey ${this.firstName}`);
-  },
+//   greet: () => {
+//     console.log(this);
+//     console.log(`Hey ${this.firstName}`);
+//   },
+// };
+
+// mick.greet;
+
+//Primitives
+// Number
+// String
+// Boolean
+// undefined
+// null
+// Symbol
+// BigInt
+
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+//Objects
+// Object Literal
+// Arrays
+// Functions
+// Almost everything
+
+const me = {
+  name: 'Mick',
+  age: 30,
 };
 
-mick.greet;
+const friend = me;
+
+friend.age = 27;
+
+console.log('Friend:', friend);
+console.log('Me:', me);
