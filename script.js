@@ -42,22 +42,38 @@
 // console.log(job);
 // console.log(year);
 
-var me = 'Mike';
-let job = 'Teacher';
-const year = 1992;
+// var me = 'Mike';
+// let job = 'Teacher';
+// const year = 1992;
 
-//Hoisting with functions
+// //Hoisting with functions
 
-console.log(addDecl(5, 5));
-// console.log(addExpr());
-// console.log(addArror());
+// console.log(addDecl(5, 5));
+// // console.log(addExpr());
+// // console.log(addArror());
 
-function addDecl(a, b) {
-  return a + b;
-}
+// function addDecl(a, b) {
+//   return a + b;
+// }
 
-const addExpr = function (a, b) {
-  return a + b;
+// const addExpr = function (a, b) {
+//   return a + b;
+// };
+
+// const addArror = (a, b) => a + b;
+
+const mick = {
+  year: 1992,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
 };
 
-const addArror = (a, b) => a + b;
+mick.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+matilda.calcAge = mick.calcAge;
+matilda.calcAge();
