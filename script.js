@@ -62,18 +62,33 @@
 
 // const addArror = (a, b) => a + b;
 
+// const mick = {
+//   year: 1992,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   },
+// };
+
+// mick.calcAge();
+
+// const matilda = {
+//   year: 2017,
+// };
+// matilda.calcAge = mick.calcAge;
+// matilda.calcAge();
+
 const mick = {
   year: 1992,
   calcAge: function () {
     console.log(this);
     console.log(2037 - this.year);
   },
+
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
 };
 
-mick.calcAge();
-
-const matilda = {
-  year: 2017,
-};
-matilda.calcAge = mick.calcAge;
-matilda.calcAge();
+mick.greet;
